@@ -1,0 +1,9 @@
+Scrapy的基本使用流程： （这五步未必每一次都要完全执行）
+1，创建一个project
+    $ scrapy startproject tutorial
+2，defining out item
+3，writing a spider
+4, writing  and configure an item pipeline
+5, execute
+
+其中135是核心步骤，24是修饰步骤。2是用来提取所需要的信息，4是决定提取到之后怎么用
