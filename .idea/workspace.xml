@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61f6844f-d776-4ed3-bef6-621021956d8a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tech163/Tech163/spiders/163spider.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firebug/spiders/firebug.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firebug/spiders/item.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tech163/Tech163/spiders/items.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tech163/Tech163/spiders/pipelines.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quest_1/quest_1/spiders/quest_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tech163/Tech163/spiders/store.py" />
+    <list default="true" id="61f6844f-d776-4ed3-bef6-621021956d8a" name="Default" comment="extract body from quest1 successfully">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quest_1/quest_1/spiders/items.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/quest_1/quest_1/items.py.tmpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/quest_1/quest_1/spiders/Books.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/quest_1/quest_1/spiders/Resources.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/quest_1/quest_1/spiders/body" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest_1/quest_1/spiders/quest_1.py" afterPath="$PROJECT_DIR$/quest_1/quest_1/spiders/quest_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spider_tutor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,34 +32,10 @@
       <file leaf-file-name="quest_1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/quest_1/quest_1/spiders/quest_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45546558">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.7287449">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
               <folding>
-                <element signature="e#25#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dmoz.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dirbot/dirbot/spiders/dmoz.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dmoz_spider.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/dmoz_spider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#27#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,11 +62,13 @@
         <option value="$PROJECT_DIR$/firebug/spiders/item.py" />
         <option value="$PROJECT_DIR$/Tech163/Tech163/items.py.tmpl" />
         <option value="$PROJECT_DIR$/Tech163/Tech163/items.py" />
-        <option value="$PROJECT_DIR$/Tech163/Tech163/spiders/163spider.py" />
         <option value="$PROJECT_DIR$/Tech163/Tech163/spiders/store.py" />
         <option value="$PROJECT_DIR$/Tech163/Tech163/pipelines.py" />
         <option value="$PROJECT_DIR$/Tech163/Tech163/settings.py" />
         <option value="$PROJECT_DIR$/Tech163/Tech163/spiders/pipelines.py" />
+        <option value="$PROJECT_DIR$/quest_1/quest_1/items.py" />
+        <option value="$PROJECT_DIR$/quest_1/quest_1/spiders/body" />
+        <option value="$PROJECT_DIR$/Tech163/Tech163/spiders/163spider.py" />
         <option value="$PROJECT_DIR$/quest_1/quest_1/spiders/quest_1.py" />
       </list>
     </option>
@@ -198,6 +176,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/quest_1/quest_1/spiders" />
       <recent name="$PROJECT_DIR$/Tech163/Tech163/spiders" />
     </key>
   </component>
@@ -398,8 +377,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="extract body from quest1 successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract body from quest1 successfully" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -568,16 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/dmoz_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tech163/Tech163/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3346856">
@@ -585,27 +560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tech163/Tech163/spiders/163spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9127789">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tech163/Tech163/spiders/store.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.060851928">
           <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirbot/dirbot/spiders/dmoz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,23 +607,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quest_1/quest_1/spiders/Books.html">
+    <entry file="file://$PROJECT_DIR$/Tech163/Tech163/spiders/163spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2659574">
+        <state vertical-scroll-proportion="0.18218623">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/dmoz_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45546558">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirbot/dirbot/spiders/dmoz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2145749">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest_1/quest_1/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39473686">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest_1/quest_1/spiders/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quest_1/quest_1/spiders/Resources.html">
+    <entry file="file://$PROJECT_DIR$/quest_1/quest_1/spiders/key.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.7234044">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quest_1/quest_1/spiders/body">
+    <entry file="file://$PROJECT_DIR$/quest_1/quest_1/spiders/key">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -675,10 +669,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quest_1/quest_1/spiders/quest_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45546558">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.7287449">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding>
-            <element signature="e#25#38#0" expanded="true" />
+            <element signature="e#27#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
