@@ -1,0 +1,5 @@
+1，return Request（） 必须写成 return [Request()]
+
+2, 用BeautifulSoup的写法，soup = Beautiful(response.body, 'lxml')
+
+3, 用rule就不用parse

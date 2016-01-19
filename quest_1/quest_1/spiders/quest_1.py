@@ -24,7 +24,7 @@ class heibanke1(scrapy.Spider):
             print "find new url, continuing..."
             new_url = "http://www.heibanke.com/lesson/crawler_ex00/" + key
             with open("key","a") as f:
-                f.write(key)
+                f.write(key + "\n")
             yield Request(url = new_url, callback=self.parse)
         else:
             print "new mission found!!!Good Job!!!\nNew Url has been save in 'New Mission'"
