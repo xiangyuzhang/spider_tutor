@@ -45,10 +45,8 @@
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
                 
 <h1>这里是黑板客爬虫闯关的第二关</h1>
-<h3>恭喜! 用户成功闯关, 继续你的爬虫之旅吧</h3>
+<h3>您输入的密码错误, 请重新输入</h3>
 
-
-<a href="/lesson/crawler_ex02/" class="btn btn-primary">下一关</a>
 
 
 
