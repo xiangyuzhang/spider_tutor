@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+    <script src="js/jquery.js"></script>
+    <script src="js/parse-1.6.7.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="javascripts/navbar.js"></script>
+    <link href="css/resultPage.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="javascripts/searchResult.js"></script>
+    <link href="css/w3.css" rel="stylesheet">
+    <script src="js/jquery.mixitup.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Usquirrel</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#" id="login">Login with facebook</a></li>
+                <li><a href="/home" id="home" style="display: none;">My Account</a></li>
+                <li><a href="#" id="logout" style="display: none;">Log out</a></li>
+            </ul>
+
+        </div>
+    </div>
+    </div>
+</nav>
+    <div class="row">
+        <div class="col-sm-3 page-sidebar">
+    <aside>
+        <div class="inner-box">
+            <div class="list-filter">
+                <h5 class="list-title">
+                    <strong>
+                        <a id="price-sort">Price</a>
+                    </strong>
+                </h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">
+                            <span class="sort" data-sort="price:desc">From high to low</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="sort" data-sort="price:asc">From low to high</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</div>
+        <div class="col-sm-9 page-content col-thin-left" id="Container">
+    <h4 class="text-right">Displaying equivalent courses for University of Massachusetts Amherst, College Writing</h4>
+    <h4 class="text-right">Didn't find your course? <button class="btn btn-link" data-toggle="modal" data-target="#contact-modal" href="#">Contact us</button> and we'll help you out!</h4>
+    
+    <div class="row item-list mix" data-price="656">
+        <div class="col-sm-2 no-padding photobox">
+            <div class="item-icon">
+                <img class="thumbnail no-margin" src="/images/usquirrel.png" alt="img">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h3>
+                <span>ENG101</span>. <span>English Composition 1: Expository Writing</span>
+            </h3>
+            <h5>
+                <span>Greenfield Community College</span>
+            </h5>
+            <div id="course-detail-0" class="collapse">
+                <div class="well well-sm">
+                    <h4>Price Detail:</h4>
+                    <p>In State Price: $656</p>
+                    <p>Out State Price: $656</p>
+                </div>
+                
+                <div>
+                    <div class="well well-sm">
+                        <h4>
+                            Course Description:
+                        </h4>
+                        <p>Focuses on the writing of essays. This course offers students the  opportunity to understand writing as a process and to develop clear,  effective presentation of ideas. The student develops an awareness of  the relationship between writer and reader. The course includes word  processing methods and research and documentation using print and  electronic texts. NOTE: Students may receive credit for only ENG 101  or ENG 103 or ENG 105</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="well well-sm">
+                        <h4>Course Schedule:</h4>
+                        
+                        <p>WTWThF 8:00am-12:00pm</p>
+                        
+                        <p>From 1/5/2016 to 1/25/2016</p>
+                        <p>Class Type: in class</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="well">
+                        <div id="comment-list-0">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>Questions or comments about this course:</label>
+                            <textarea id="comment-box-0" class="form-control" rows="5"></textarea>
+                            <button type="button" class="btn btn-default comment-btn" course-id="1emSsfYuRw" target="comment-box-0" comment-list="comment-list-0">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-warning expand-btn" data-toggle="collapse" data-target="#course-detail-0">show detail</button>
+        </div>
+        <div class="col-sm-3 pull-right text-right">
+            <h2>From $656</h2>
+            <br/>
+            <button type="button" class="btn btn-warning apply-btn"
+                    targetCourseName="English Composition 1: Expository Writing"
+                    targetCourseNumber="ENG101"
+                    targetSchoolName="Greenfield Community College"
+                    originCourseName="College Writing"
+                    originCourseNumber="ENGLWRIT 112"
+                    originSchoolName="University of Massachusetts Amherst"
+                    session="winter 2016"
+                    originCourseId="QLa8kiBef8"
+                    originSchoolId="c3QYH8KYSQ"
+                    targetCourseId="1emSsfYuRw"
+                    targetSchoolId="521BPkK8vU"
+                    sessionId="QFDt8Qt7vT"
+                    >
+                Apply Now
+            </button>
+        </div>
+    </div>
+
+    
+</div>
+
+<div id="confirmDialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Course Application<br>Equivalent course for <span id="originCourse"></span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" class="form-control" id="userName">
+                    <label for="originSchool">School:</label>
+                    <input type="text" class="form-control" id="originSchool">
+                    <label for="targetCourse">Select Course:</label>
+                    <input type="text" class="form-control" id="targetCourse">
+                    <label for="targetSchool">Select School:</label>
+                    <input type="text" class="form-control" id="targetSchool">
+                    <label for="session">Session:</label>
+                    <input type="text" class="form-control" id="session">
+                    <label for="email">Your Contact Email:</label>
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <p>
+                    * Please review your information before submit your request.
+                    <br>
+                    We will get back to your within 2 Business Days for confirmation! Thank you!
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary text-left pull-left" data-dismiss="modal" id="confirm-btn">Continue</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+    </div>
+    <div id="contact-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Please provide the description of your transfer requirement.</h4>
+                </div>
+                <div class="modal-body">
+                    <textarea id="contact-textarea"  class="form-control comment-textarea" rows="5"></textarea>
+                </div>
+                <div class="modal-header">
+                    <h4 class="modal-title">Your contact email</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="user-contact-email">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submit-contact-message" target="contact-textarea" type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
