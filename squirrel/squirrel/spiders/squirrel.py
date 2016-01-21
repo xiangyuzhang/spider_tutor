@@ -9,23 +9,49 @@ import re
 class squirrel(scrapy.Spider):
     name = "squirrel"
 #     start_urls = ["http://www.heibanke.com/lesson/crawler_ex01/"]
+    school = []
+    info = {}
+    def start_requests(self):       # step 1, start_url
+        print "enter start_requests"
+        return [Request("http://www.usquirrel.com", callback = self.find_school, dont_filter = True)]
 
+    def find_school(self,response):         # step 2, find all the candidate school and start find the following course
+        print "enter find_school"
+        for school_item in response.xpath("//select/option").re("\".*\""):
+            self.school.append(school_item)
 
-    def start_requests(self):
-        return [Request("http://www.usquirrel.com", callback = self.post_research,dont_filter = True)]
+            school_item = str(school_item)
+            print school_item
+            request = scrapy.Request(("http://www.usquirrel.com/autocomplete/course?school=" + ("+").join(school_item.split(" "))).replace("\"",""), callback = self.find_course, dont_filter = True)
+            request.meta["school"] = school_item
+            yield request
 
+    def find_course(self,response): # step 3, find all the given school's courses, and start over to send request
+        print "enter find_course"
+        courses = []
+        school = response.meta["school"]
+        courses = response.body.split(",")
+        for course_item in courses:
+            request = scrapy.Request("http://www.usquirrel.com", callback = self.post_research, dont_filter = True)
+            request.meta["course"] = course_item
+            request.meta["school"] = school
+            yield request
     #FormRequeset
-    def post_research(self, response):
-        print "start research"
+    def post_research(self, response): # step 4, based on the request, open course info
+        print "post_research"
 
-        return [scrapy.FormRequest.from_response(response,
+        school = response.meta["school"]
+        course = response.meta["course"]
+        print "This is school:", school
+        print "this is course:", course
+        yield scrapy.FormRequest.from_response(response,
                             formdata = {
-                            'university': "University of Massachusetts Amherst",
-                            'course': 'College Writing - ENGLWRIT 112'
+                            'university': school,
+                            'course': course
                             },
                             callback = self.after_login
-                            )]
-    def after_login(self,response):
+                            )
+    def after_login(self,response): # final step, start to derive course info
         print "after_login"
 #        soup = BeautifulSoup(response.body, 'lxml')
 #        print soup.find_all('p')
