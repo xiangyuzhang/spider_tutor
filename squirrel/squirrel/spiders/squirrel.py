@@ -21,27 +21,37 @@ class squirrel(scrapy.Spider):
             self.school.append(school_item)
 
             school_item = str(school_item)
-            print school_item
-            request = scrapy.Request(("http://www.usquirrel.com/autocomplete/course?school=" + ("+").join(school_item.split(" "))).replace("\"",""), callback = self.find_course, dont_filter = True)
-            request.meta["school"] = school_item
-            yield request
+#            print school_item
+#            request = scrapy.Request(("http://www.usquirrel.com/autocomplete/course?school=" + ("+").join(school_item.split(" "))).replace("\"",""), callback = self.find_course, dont_filter = True)
+#            request.meta["school"] = school_item
+#            yield request
+        print self.school
+        request = scrapy.Request(("http://www.usquirrel.com/autocomplete/course?school=" + ("+").join(self.school[1].split(" "))).replace("\"",""), callback = self.find_course, dont_filter = True)
+        request.meta["school"] = self.school[1]
+
+        return [request]
 
     def find_course(self,response): # step 3, find all the given school's courses, and start over to send request
         print "enter find_course"
         courses = []
         school = response.meta["school"]
-        courses = response.body.split(",")
-        for course_item in courses:
-            request = scrapy.Request("http://www.usquirrel.com", callback = self.post_research, dont_filter = True)
-            request.meta["course"] = course_item
-            request.meta["school"] = school
-            yield request
+        courses = response.body.replace("[","").replace("]","").split(",")
+        print courses
+#        for course_item in courses:
+#            request = scrapy.Request("http://www.usquirrel.com", callback = self.post_research, dont_filter = True)
+#            request.meta["course"] = course_item
+#            request.meta["school"] = school
+#            yield request
+        request = scrapy.Request("http://www.usquirrel.com", callback = self.post_research, dont_filter = True)
+        request.meta["course"] = courses[0]
+        request.meta["school"] = school
+        return [request]
     #FormRequeset
     def post_research(self, response): # step 4, based on the request, open course info
         print "post_research"
 
-        school = response.meta["school"]
-        course = response.meta["course"]
+        school = response.meta["school"].replace("\"","")
+        course = response.meta["course"].replace("\"","")
         print "This is school:", school
         print "this is course:", course
         yield scrapy.FormRequest.from_response(response,
@@ -63,6 +73,7 @@ class squirrel(scrapy.Spider):
         self.get_schedule_from(response,item)
         self.get_schedule_type(response,item)
         self.get_course_site(response,item)
+        self.get_course_name(response,item)
         return item
 
     def get_course_site(self, response, item):
@@ -92,3 +103,10 @@ class squirrel(scrapy.Spider):
     def get_schedule_type(self,response,item):
         type = response.xpath("//div/p")[5].extract().replace("<p>","").replace("</p>","").replace("Class Type:","")
         item['Course_schedule_type'] = type
+
+    def get_course_name(self,response,item):
+        name = str((". ").join(response.xpath("//h3/span").re(">.*<"))).replace("<","").replace(">","")
+        item["course_name"] = name
+#        print " this is the course name", name
+
+
