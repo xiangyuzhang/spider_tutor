@@ -19,17 +19,16 @@ class squirrel(scrapy.Spider):
         print "enter find_school"
         for school_item in response.xpath("//select/option").re("\".*\""):
             self.school.append(school_item)
-
             school_item = str(school_item)
-#            print school_item
-#            request = scrapy.Request(("http://www.usquirrel.com/autocomplete/course?school=" + ("+").join(school_item.split(" "))).replace("\"",""), callback = self.find_course, dont_filter = True)
-#            request.meta["school"] = school_item
-#            yield request
-        print self.school
-        request = scrapy.Request(("http://www.usquirrel.com/autocomplete/course?school=" + ("+").join(self.school[1].split(" "))).replace("\"",""), callback = self.find_course, dont_filter = True)
-        request.meta["school"] = self.school[1]
+            print school_item
+            request = scrapy.Request(("http://www.usquirrel.com/autocomplete/course?school=" + ("+").join(school_item.split(" "))).replace("\"",""), callback = self.find_course, dont_filter = True)
+            request.meta["school"] = school_item
+            yield request
+#        print self.school
+#        request = scrapy.Request(("http://www.usquirrel.com/autocomplete/course?school=" + ("+").join(self.school[1].split(" "))).replace("\"",""), callback = self.find_course, dont_filter = True)
+#        request.meta["school"] = self.school[1]
 
-        return [request]
+#        return [request]
 
     def find_course(self,response): # step 3, find all the given school's courses, and start over to send request
         print "enter find_course"
