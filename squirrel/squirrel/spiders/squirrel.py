@@ -36,15 +36,15 @@ class squirrel(scrapy.Spider):
         school = response.meta["school"]
         courses = response.body.replace("[","").replace("]","").split(",")
         print courses
-#        for course_item in courses:
-#            request = scrapy.Request("http://www.usquirrel.com", callback = self.post_research, dont_filter = True)
-#            request.meta["course"] = course_item
-#            request.meta["school"] = school
-#            yield request
-        request = scrapy.Request("http://www.usquirrel.com", callback = self.post_research, dont_filter = True)
-        request.meta["course"] = courses[0]
-        request.meta["school"] = school
-        return [request]
+        for course_item in courses:
+            request = scrapy.Request("http://www.usquirrel.com", callback = self.post_research, dont_filter = True)
+            request.meta["course"] = course_item
+            request.meta["school"] = school
+            yield request
+#        request = scrapy.Request("http://www.usquirrel.com", callback = self.post_research, dont_filter = True)
+#        request.meta["course"] = courses[0]
+#        request.meta["school"] = school
+#        return [request]
     #FormRequeset
     def post_research(self, response): # step 4, based on the request, open course info
         print "post_research"
